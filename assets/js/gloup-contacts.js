@@ -1,7 +1,7 @@
 (function(){
   // Контакты агентства. Впишите ссылки — пустые ведут к форме заявки.
   var CONTACTS=[
-    {name:'Instagram',note:'Кейсы и закулисье',href:''},
+    {name:'Instagram',note:'@gloup.marketing',href:'https://www.instagram.com/gloup.marketing'},
     {name:'Telegram',note:'Быстрый ответ',href:''},
     {name:'WhatsApp',note:'Написать менеджеру',href:''},
     {name:'Почта',note:'Для брифов и предложений',href:''}
