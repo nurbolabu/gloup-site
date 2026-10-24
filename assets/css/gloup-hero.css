@@ -1,0 +1,10 @@
+/* GLOUP: интро первого экрана */
+.gh-intro .gh-hide{opacity:0}
+.gh-intro .gh-w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
+.gh-intro .gh-w>span{display:inline-block;transform:translateY(105%);transition:transform 1s cubic-bezier(.22,1,.36,1)}
+.gh-intro .gh-w.is-in>span{transform:none}
+.gh-fade{opacity:0;transform:translateY(18px);filter:blur(6px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1),filter 1s}
+.gh-fade.is-in{opacity:1;transform:none;filter:none}
+.gh-card{opacity:0;transform:scale(.55);filter:blur(10px);transition:opacity .7s ease,transform .9s cubic-bezier(.34,1.45,.64,1),filter .7s ease}
+.gh-card.is-in{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){.gh-intro .gh-w>span,.gh-fade,.gh-card{transform:none!important;opacity:1!important;filter:none!important;transition:none!important}}
