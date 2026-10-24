@@ -7,10 +7,9 @@
   // nda:1 — размытый знак без настоящего названия.
   var LOGOS=[
     {t:'VOGUE',s:'Hotel Supreme',c:'serif'},{t:'Candyland',c:'round'},{t:'LVI',s:'Hotels & Resorts',c:'bebas'},
-    {t:'NDA BRAND',c:'wide',nda:1},{t:'THE RISE',s:'Bodrum',c:'wide'},{t:'PINSKY',s:'Beach Lounge',c:'bebas'},
-    {t:'Jannat Garden',c:'italic'},{t:'Toranaga',s:'Teppanyaki',c:'italic'},{t:'NDA',c:'box',nda:1},
-    {t:'HERO ELD',c:'bebas'},{t:'USA TV',c:'round'},{t:'OWAY CARGO',c:'wide'},{t:'Modern Nomad',c:'thin'},{t:'HIDDEN',c:'serif',nda:1}
-  ];
+    {t:'THE RISE',s:'Bodrum',c:'wide'},{t:'PINSKY',s:'Beach Lounge',c:'bebas'},
+    {t:'Jannat Garden',c:'italic'},{t:'Toranaga',s:'Teppanyaki',c:'italic'},
+    {t:'HERO ELD',c:'bebas'},{t:'USA TV',c:'round'},{t:'OWAY CARGO',c:'wide'},{t:'Modern Nomad',c:'thin'}];
   var SERVICES=[
     {n:'Стратегия',d:'Аудит, цели, анализ рынка и конкурентов и пошаговый план роста бренда.',c:['Аудит','Позиционирование','Маркетинговая стратегия','Вывод на рынок','B2B · B2G · экспорт'],tag:'Стратегия'},
     {n:'Брендинг',d:'Позиционирование и визуальный образ, которые отличают вас от конкурентов и позволяют продавать дороже.',c:['Нейминг','Логотип и айдентика','Брендбук','Упаковка','Ребрендинг'],tag:'Брендинг'},

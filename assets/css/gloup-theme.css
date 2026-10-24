@@ -1,0 +1,19 @@
+/* GLOUP: все блоки чисто чёрные; в начале блока свечение с резкой верхней границей, книзу растворяется */
+body,.t-body,#allrecords{background:#000}
+.gb-services,.pf,.gb-steps,.gl,.gc,.gs,.gb-logos{background:#000!important;position:relative;isolation:isolate}
+.gb-services::before,.pf::before,.gb-steps::before,.gl::before,.gc::before{
+  content:"";position:absolute;left:0;right:0;top:0;bottom:auto;width:auto;height:min(620px,90%);z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 85% 100% at 50% 0,rgba(184,109,117,.30) 0%,rgba(184,109,117,.12) 40%,transparent 75%)}
+#rec4262651503 .t396__artboard,#rec4262651503 .t396__carrier{background-color:#000!important}
+#rec4262651503 .t396__carrier{background-image:radial-gradient(ellipse 85% 620px at 50% 0,rgba(184,109,117,.30) 0%,rgba(184,109,117,.12) 40%,transparent 75%)!important;background-size:100% 100%!important}
+
+/* логотипы: просто на чёрном, без капсулы */
+.gb-logos{padding:48px 0}
+.gb-logos__pill{height:90px;max-width:none;margin:0;border-radius:0;background:none!important;border:0;box-shadow:none}
+.gb-logos__pill::after{background:linear-gradient(90deg,#000,transparent 12%,transparent 88%,#000)}
+@media (max-width:639px){.gb-logos{padding:32px 0}.gb-logos__pill{height:70px;margin:0}}
+
+/* появление блоков при прокрутке */
+.g-rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
+.g-rv.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.g-rv{opacity:1;transform:none;transition:none}}
