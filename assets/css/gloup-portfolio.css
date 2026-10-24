@@ -117,3 +117,12 @@
    clip обрезает горизонтальное переполнение, но (в отличие от hidden) не создаёт контейнер прокрутки. */
 html,body{overflow-x:clip}
 @supports not (overflow-x:clip){html,body{overflow-x:hidden}}
+
+/* телефон: файлы в папке чуть меньше */
+@media (max-width:639px){
+  .pf-files{left:12%;right:15%;top:-8%;height:56%}
+  .pf-file{padding:9px 11px;border-radius:12px}
+  .pf-file__bar{font-size:10px}
+  .pf-file__bar em{font-size:9px}
+  .pf-file i{height:4px;margin-top:6px}
+}
