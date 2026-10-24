@@ -55,7 +55,7 @@
   function folder(p,i){var f=FILE[p.tag]||['Brief','PDF'];
     return '<button class="pf-folder" type="button" data-i="'+i+'" data-tag="'+esc(p.tag)+'" aria-label="Открыть кейс '+esc(p.name)+'">'+
       '<span class="pf-body">'+
-      '<span class="pf-back'+(p.nda?' pf-back--nda':'')+'" style="'+pic(p,i,0)+'">'+(p.nda?'<span class="pf-lock">NDA</span>':'')+'</span>'+
+      '<span class="pf-back"></span>'+
       '<span class="pf-files">'+
         '<span class="pf-file"><span class="pf-file__bar">Brief<em>TXT · 6 KB</em></span><i></i><i></i><i></i></span>'+
         '<span class="pf-file"><span class="pf-file__bar">'+f[0]+'<em>'+f[1]+'</em></span><i></i><i></i><i></i></span>'+

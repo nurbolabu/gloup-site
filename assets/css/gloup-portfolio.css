@@ -126,3 +126,7 @@ html,body{overflow-x:clip}
   .pf-file__bar em{font-size:9px}
   .pf-file i{height:4px;margin-top:6px}
 }
+
+/* задняя стенка папки — того же стекла, что и передняя, без фото */
+.pf-back{background:linear-gradient(165deg,#3a3335 0%,#221c1e 45%,#3b272b 100%)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.14)}
+.pf-back::after{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.25))}
