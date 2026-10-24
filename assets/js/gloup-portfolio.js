@@ -119,9 +119,9 @@
       [].forEach.call(box.children,function(s){var b=s.getBoundingClientRect();
         s.style.setProperty('--fx',(cx-(b.left+b.width/2))+'px');s.style.setProperty('--fy',(cy-(b.top+b.height/2))+'px')});
       box.offsetWidth;
-      modal.classList.add('is-open');document.body.classList.add('pf-lock');modal.querySelector('.pf-close').focus({preventScroll:true});
+      modal.classList.add('is-open');modal.querySelector('.pf-close').focus({preventScroll:true});
     }
-    function close(){if(!modal.classList.contains('is-open'))return;modal.classList.remove('is-open');document.body.classList.remove('pf-lock');if(last)last.focus({preventScroll:true})}
+    function close(){if(!modal.classList.contains('is-open'))return;modal.classList.remove('is-open');if(last)last.focus({preventScroll:true})}
     grid.addEventListener('click',function(e){var b=e.target.closest('.pf-folder');if(b)open(b)});
     modal.querySelector('.pf-close').addEventListener('click',close);
     modal.querySelector('.pf-modal__bg').addEventListener('click',close);
