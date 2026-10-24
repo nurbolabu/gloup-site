@@ -42,6 +42,10 @@
     nodes.forEach(function(n){io.observe(n)});
   }
 
+  // Скрипт Tilda сам дописывает плашку «Made on Tilda» в конец страницы — удаляем её, когда появится
+  function dropTildaLabel(){[].forEach.call(document.querySelectorAll('.t-tildalabel,#tildacopy'),function(n){n.remove()})}
+  if('MutationObserver' in window)new MutationObserver(dropTildaLabel).observe(document.documentElement,{childList:true,subtree:true});
+
   document.addEventListener('DOMContentLoaded',function(){
     var track=document.querySelector('.gb-logos__track');
     if(track){var h=LOGOS.map(function(l){return '<span class="gb-logo gb-logo--'+l.c+(l.nda?' gb-logo--nda':'')+'"'+(l.nda?' aria-hidden="true"':'')+'>'+esc(l.t)+(l.s?'<small>'+esc(l.s)+'</small>':'')+'</span>'}).join('');
