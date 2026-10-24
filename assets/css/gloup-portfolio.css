@@ -26,7 +26,7 @@
 
 .pf-files{position:absolute;left:8%;right:10%;top:-14%;height:66%}
 .pf-file{position:absolute;inset:0;border-radius:14px;overflow:hidden;box-sizing:border-box;padding:11px 13px;background:#1b1819;border:1px solid rgba(255,255,255,.12);box-shadow:0 -6px 22px -10px rgba(0,0,0,.8);transform-origin:0% 100%;transition:transform .9s var(--pf-ease);will-change:transform}
-.pf-file__bar{display:flex;justify-content:space-between;gap:8px;font-size:11px;font-weight:500;color:#f1e4e5;white-space:nowrap}
+.pf-file__bar{display:flex;justify-content:space-between;gap:8px;font-size:11px;font-weight:500;color:#e6e6e6;white-space:nowrap}
 .pf-file__bar em{font-style:normal;font-weight:400;font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.45)}
 .pf-file i{display:block;height:5px;border-radius:3px;background:rgba(255,255,255,.12);margin-top:8px}
 .pf-file i:nth-of-type(2){width:72%}.pf-file i:nth-of-type(3){width:86%}
@@ -82,12 +82,12 @@
 .pf-modal.is-open .pf-sheet{opacity:1;transform:none}
 .pf-sheet__img{aspect-ratio:16/10}
 .pf-sheet__body{padding:18px 18px 20px}
-.pf-sheet__body b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#cfa0a6;margin-bottom:8px;font-weight:500}
+.pf-sheet__body b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#b86d75;margin-bottom:8px;font-weight:500}
 .pf-sheet__body p{margin:0;font-size:14px;line-height:1.55;font-weight:300;color:#e6e6e6}
 .pf-sheet--accent{border-color:rgba(184,109,117,.55);background:linear-gradient(160deg,rgba(184,109,117,.22),rgba(255,255,255,.02))}
 .pf-sheet__big{display:block;font-size:30px;font-weight:300;margin:4px 0 6px;color:#fff;line-height:1.15}
 .pf-people{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
-.pf-people span{padding:4px 10px;border-radius:20px;border:1px solid rgba(184,109,117,.4);font-size:12px;color:#e9d3d5}
+.pf-people span{padding:4px 10px;border-radius:20px;border:1px solid rgba(184,109,117,.4);font-size:12px;color:#e6e6e6}
 .pf-modal{overscroll-behavior:contain}.pf-modal__bg{touch-action:none}.pf-sheets{overscroll-behavior:contain}
 
 @media (max-width:1199px){.pf__title{font-size:34px}.pf-sheets{grid-template-columns:repeat(2,minmax(0,300px));overflow:auto;padding-bottom:20px}}
