@@ -8,7 +8,8 @@
   // Tilda перезаписывает className у элементов при инициализации — вешаем классы на внутренний .tn-atom
   function el(id){var e=root.querySelector('[data-elem-id="'+id+'"]');return e&&(e.querySelector('.tn-atom')||e)}
   root.classList.add('gh-intro');
-  [SUB,NUM,CAP].forEach(function(id){var e=el(id);e&&e.classList.add('gh-fade')});
+  var sub=el(SUB);if(sub){sub.style.setProperty('--gh-o',getComputedStyle(sub).opacity);sub.classList.add('gh-soft')}
+  [NUM,CAP].forEach(function(id){var e=el(id);e&&e.classList.add('gh-fade')});
   var atom=el(TITLE);
   if(atom){
     // каждое слово — в маску, слово выезжает снизу
@@ -29,5 +30,5 @@
   }
   if(document.readyState==='complete')at(150,start);else addEventListener('load',function(){at(150,start)});
   // подстраховка: если что-то пошло не так, через 5 с показываем весь текст
-  at(5000,function(){root.querySelectorAll('.gh-w,.gh-fade').forEach(function(e){e.classList.add('is-in')})});
+  at(5000,function(){root.querySelectorAll('.gh-w,.gh-fade,.gh-soft').forEach(function(e){e.classList.add('is-in')})});
 })();
