@@ -1,5 +1,6 @@
 (function(){
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  var ARROW='<svg class="g-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>';
   var plus='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>';
 
   // Логотипы: пока текстовые знаки. Когда будут SVG-логотипы, замените t на <img>.
@@ -59,7 +60,7 @@
           '<div class="gb-svc__body" id="gbs'+k+'"><div class="gb-svc__inner"><div class="gb-svc__content"><div class="gb-svc__chips">'+
           s.c.map(function(c,i){return '<span style="transition-delay:'+(.08+i*.05)+'s">'+esc(c)+'</span>'}).join('')+'</div><div class="gb-svc__actions">'+
           (s.tag?'<button class="gb-btn" type="button" data-cases="'+esc(s.tag)+'">Смотреть кейсы</button>':'')+
-          '<a class="gb-btn" href="#lead">Обсудить ↗</a></div></div></div></div></div></div>';
+          '<a class="gb-btn" href="#lead">Обсудить '+ARROW+'</a></div></div></div></div></div></div>';
       }).join('');
       var items=[].slice.call(svc.children);
       items.forEach(function(it,k){it.style.transitionDelay=Math.min(k,4)*.06+'s'});
@@ -78,7 +79,7 @@
     var tl=document.querySelector('.gb-tl');
     if(tl){
       tl.innerHTML='<div class="gb-tl__line"><i></i></div>'+STEPS.map(function(s,k){
-        return '<div class="gb-st"><span class="gb-st__dot"></span><div class="gb-st__file" style="transition-delay:'+k*.12+'s"><div class="gb-st__bar"><span class="gb-st__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+IC[s.i]+'</svg></span><span class="gb-st__meta">'+s.m+'</span></div><h3>'+esc(s.t)+'</h3><p>'+esc(s.x)+'</p></div></div>';
+        return '<div class="gb-st"><span class="gb-st__dot"></span><div class="gb-st__file" style="transition-delay:'+k*.12+'s"><span class="gb-st__tab">'+s.m+'</span><div class="gb-st__card"><span class="gb-st__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+IC[s.i]+'</svg></span><h3>'+esc(s.t)+'</h3><p>'+esc(s.x)+'</p></div></div></div>';
       }).join('');
       var steps=[].slice.call(tl.querySelectorAll('.gb-st'));
       reveal(steps,'is-in',.3);
