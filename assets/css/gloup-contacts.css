@@ -19,3 +19,7 @@
 .gc__top svg{width:14px;height:14px}
 @media (max-width:959px){.gc__wrap{grid-template-columns:1fr;gap:48px;padding-top:80px}.gc__title{font-size:32px}.gc::before{width:120%;left:-40%;top:-20%;height:70%}}
 @media (max-width:639px){.gc__wrap{padding:64px 20px 32px}.gc__logo{width:260px}.gc__lead{margin-top:24px;font-size:15px}.gc__title{font-size:28px}.gc__link{font-size:18px;padding:18px 2px}.gc__bottom{flex-direction:column-reverse;align-items:flex-start}}
+
+/* логотип в футере меньше */
+.gc__logo{width:min(100%,260px)}
+@media (max-width:639px){.gc__logo{width:180px}}
