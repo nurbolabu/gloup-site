@@ -75,17 +75,35 @@
       });
     }
 
+    // Этапы: линия идёт через иконки шагов; когда доходит до иконки — та заполняется фирменным цветом
     var tl=document.querySelector('.gb-tl');
     if(tl){
-      tl.innerHTML='<div class="gb-tl__line"><i></i></div>'+STEPS.map(function(s,k){
-        return '<div class="gb-st"><span class="gb-st__dot"></span><div class="gb-st__file" style="transition-delay:'+k*.12+'s"><span class="gb-st__tab">'+s.m+'</span><div class="gb-st__card"><span class="gb-st__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+IC[s.i]+'</svg></span><h3>'+esc(s.t)+'</h3><p>'+esc(s.x)+'</p></div></div></div>';
-      }).join('');
-      var steps=[].slice.call(tl.querySelectorAll('.gb-st'));
-      reveal(steps,'is-in',.3);
-      var line=tl.querySelector('.gb-tl__line'),tick=false;
-      function prog(){tick=false;var r=tl.getBoundingClientRect(),vh=innerHeight;
-        var p=Math.min(1,Math.max(0,(vh*.85-r.top)/(r.height+vh*.35)));line.style.setProperty('--p',p.toFixed(3))}
-      addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(prog)}},{passive:true});prog();
+      tl.className='gb-path';
+      tl.innerHTML='<div class="gb-path__line" aria-hidden="true"><i></i></div><ol class="gb-path__list">'+STEPS.map(function(s){
+        return '<li class="gb-path__step"><span class="gb-path__node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+IC[s.i]+'</svg></span>'+
+          '<div class="gb-path__text"><span class="gb-path__meta">'+s.m+'</span><h3>'+esc(s.t)+'</h3><p>'+esc(s.x)+'</p></div></li>';
+      }).join('')+'</ol>';
+      var line=tl.querySelector('.gb-path__line'),fill=line.firstChild,nodes=[].slice.call(tl.querySelectorAll('.gb-path__node')),tick=false;
+      reveal([].slice.call(tl.querySelectorAll('.gb-path__step')),'is-in',.3);
+      function place(){
+        // линия от центра первой иконки до центра последней
+        // offsetTop/Left не учитывают transform, поэтому анимация появления шагов не сдвигает линию
+        function pos(el){var x=0,y=0;while(el&&el!==tl){x+=el.offsetLeft;y+=el.offsetTop;el=el.offsetParent}return {x:x+nodes[0].offsetWidth/2,y:y+nodes[0].offsetHeight/2}}
+        var f=pos(nodes[0]),l=pos(nodes[nodes.length-1]);
+        var vert=l.y-f.y>l.x-f.x;tl.classList.toggle('is-vert',vert);
+        if(vert){line.style.cssText='left:'+f.x+'px;top:'+f.y+'px;height:'+(l.y-f.y)+'px;width:1px'}
+        else{line.style.cssText='top:'+f.y+'px;left:'+f.x+'px;width:'+(l.x-f.x)+'px;height:1px'}
+        prog();
+      }
+      function prog(){tick=false;
+        var r=line.getBoundingClientRect(),vh=innerHeight,vert=tl.classList.contains('is-vert'),p;
+        if(vert)p=(vh*.62-r.top)/Math.max(r.height,1);
+        else{var s=tl.getBoundingClientRect();p=(vh*.8-s.top)/(s.height*.9)}
+        p=Math.min(1,Math.max(0,p));fill.style.transform=(vert?'scaleY(':'scaleX(')+p.toFixed(4)+')';
+        nodes.forEach(function(n,k){n.classList.toggle('is-on',p>=k/(nodes.length-1)-.002)});
+      }
+      addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(prog)}},{passive:true});
+      addEventListener('resize',place);addEventListener('load',place);place();
     }
   });
 })();
