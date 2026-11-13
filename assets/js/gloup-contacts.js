@@ -1,10 +1,10 @@
 (function(){
-  // Контакты агентства. Впишите ссылки — пустые ведут к форме заявки.
+  // Контакты агентства. Пустая ссылка ведёт к форме заявки.
   var CONTACTS=[
     {name:'Instagram',note:'@gloup.marketing',href:'https://www.instagram.com/gloup.marketing'},
-    {name:'Telegram',note:'Быстрый ответ',href:''},
-    {name:'WhatsApp',note:'Написать менеджеру',href:''},
-    {name:'Почта',note:'Для брифов и предложений',href:''}
+    {name:'WhatsApp',note:'+996 506 686 686',href:'https://wa.me/996506686686'},
+    {name:'WhatsApp',note:'+90 552 586 81 80',href:'https://wa.me/905525868180'},
+    {name:'Почта',note:'gloup.digital.agency@gmail.com',href:'mailto:gloup.digital.agency@gmail.com'}
   ];
   var ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>';
   document.addEventListener('DOMContentLoaded',function(){

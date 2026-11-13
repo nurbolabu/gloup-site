@@ -1,5 +1,5 @@
 /* GLOUP portfolio: glass folders */
-.pf{--pf-accent:#b86d75;--pf-ease:cubic-bezier(.22,1,.36,1);font-family:Montserrat,Arial,sans-serif;color:#fff;padding:110px 0 120px;background:radial-gradient(60% 40% at 50% 0%,rgba(184,109,117,.16),transparent 70%),linear-gradient(180deg,#000 0%,#242424 100%);overflow:hidden}
+.pf{--pf-accent:#974634;--pf-ease:cubic-bezier(.22,1,.36,1);font-family:Montserrat,Arial,sans-serif;color:#fff;padding:110px 0 120px;background:radial-gradient(60% 40% at 50% 0%,rgba(151,70,52,.16),transparent 70%),linear-gradient(180deg,#000 0%,#242424 100%);overflow:hidden}
 .pf__wrap{max-width:1200px;margin:0 auto;padding:0 20px;box-sizing:border-box}
 .pf__eyebrow{display:block;text-align:center;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--pf-accent);margin-bottom:16px}
 .pf__title{margin:0 0 18px;text-align:center;font-weight:400;font-size:40px;line-height:1.2;text-transform:uppercase}
@@ -7,7 +7,7 @@
 
 /* filters — outline, как кнопка BRIEF */
 .pf__filters{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0 auto 72px;max-width:900px}
-.pf-chip,.pf-more{height:38px;padding:0 18px;border-radius:32px;border:1px solid rgba(184,109,117,.45);background:transparent;color:var(--pf-accent);font:400 13px Montserrat,Arial,sans-serif;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.pf-chip,.pf-more{height:38px;padding:0 18px;border-radius:32px;border:1px solid rgba(151,70,52,.45);background:transparent;color:var(--pf-accent);font:400 13px Montserrat,Arial,sans-serif;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
 .pf-chip:hover,.pf-more:hover{border-color:var(--pf-accent)}
 .pf-chip.is-active{background:var(--pf-accent);color:#242424;border-color:var(--pf-accent)}
 .pf-more{display:flex;align-items:center;gap:10px;height:48px;padding:0 30px;margin:64px auto 0;font-size:14px;letter-spacing:.06em}
@@ -37,7 +37,7 @@
 .pf-file:nth-child(3){transform:translate(9%,8%) rotate(7deg)}
 
 .pf-front{position:absolute;left:0;right:0;bottom:0;height:74%;clip-path:url(#pfFront);transform-origin:50% 100%;transition:transform .9s var(--pf-ease);
-  background:linear-gradient(165deg,rgba(255,255,255,.13),rgba(36,28,30,.4) 45%,rgba(184,109,117,.2));-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4)}
+  background:linear-gradient(165deg,rgba(255,255,255,.13),rgba(36,28,30,.4) 45%,rgba(151,70,52,.2));-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4)}
 .pf-front::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.25) 0,rgba(255,255,255,0) 2px),linear-gradient(0deg,rgba(0,0,0,.4),transparent 65%)}
 .pf-shadow{position:absolute;left:8%;right:8%;bottom:-16px;height:28px;background:radial-gradient(50% 50% at 50% 50%,rgba(0,0,0,.7),transparent);filter:blur(6px);z-index:-1}
 .pf-meta{position:absolute;left:8%;right:22%;bottom:10%}
@@ -46,7 +46,7 @@
 .pf-sub{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:6px;font-size:12px;line-height:1.45;font-weight:300;color:rgba(255,255,255,.7)}
 .pf-nda{position:absolute;top:14%;right:7%;padding:4px 10px;border-radius:20px;border:1px solid rgba(255,255,255,.22);font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.75)}
 /* тонкая outline-стрелка вместо кнопки с заливкой */
-.pf-open{position:absolute;right:7%;bottom:10%;width:38px;height:38px;border-radius:50%;border:1px solid rgba(184,109,117,.55);display:flex;align-items:center;justify-content:center;color:var(--pf-accent);transition:transform .9s var(--pf-ease),background .4s,color .4s}
+.pf-open{position:absolute;right:7%;bottom:10%;width:38px;height:38px;border-radius:50%;border:1px solid rgba(151,70,52,.55);display:flex;align-items:center;justify-content:center;color:var(--pf-accent);transition:transform .9s var(--pf-ease),background .4s,color .4s}
 .pf-open svg{width:16px;height:16px}
 
 @media (hover:hover){
@@ -72,22 +72,22 @@
 .pf-modal.is-open{visibility:visible;transition:none}.pf-modal.is-open .pf-modal__bg{opacity:1}
 .pf-modal__head{position:relative;text-align:center;margin-bottom:36px;max-width:720px;opacity:0;transform:translateY(-12px);transition:.6s .15s cubic-bezier(.22,1,.36,1)}
 .pf-modal.is-open .pf-modal__head{opacity:1;transform:none}
-.pf-modal__head small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#b86d75;margin-bottom:10px}
+.pf-modal__head small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#974634;margin-bottom:10px}
 .pf-modal__head h3{margin:0;font-size:32px;font-weight:400;text-transform:uppercase}
-.pf-close{position:absolute;top:24px;right:24px;box-sizing:border-box;width:46px;min-width:46px;height:46px;aspect-ratio:1/1;flex:none;padding:0;margin:0;display:flex;align-items:center;justify-content:center;line-height:1;border-radius:50%;border:1px solid rgba(184,109,117,.55);background:transparent;color:#b86d75;font-size:18px;cursor:pointer;z-index:2;transition:background .3s,color .3s}
-.pf-close:hover{background:#b86d75;color:#242424}
+.pf-close{position:absolute;top:24px;right:24px;box-sizing:border-box;width:46px;min-width:46px;height:46px;aspect-ratio:1/1;flex:none;padding:0;margin:0;display:flex;align-items:center;justify-content:center;line-height:1;border-radius:50%;border:1px solid rgba(151,70,52,.55);background:transparent;color:#974634;font-size:18px;cursor:pointer;z-index:2;transition:background .3s,color .3s}
+.pf-close:hover{background:#974634;color:#242424}
 .pf-sheets{position:relative;display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,270px));grid-auto-rows:max-content;gap:22px;width:100%;justify-content:center;max-height:calc(100vh - 230px)}
 .pf-sheet{border-radius:20px;overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.12);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 30px 60px -25px rgba(0,0,0,.9);
   opacity:0;transform:translate(var(--fx,0),var(--fy,40vh)) scale(.3) rotate(var(--r,0deg));transition:transform 1s cubic-bezier(.22,1,.36,1),opacity .5s}
 .pf-modal.is-open .pf-sheet{opacity:1;transform:none}
 .pf-sheet__img{aspect-ratio:16/10}
 .pf-sheet__body{padding:18px 18px 20px}
-.pf-sheet__body b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#b86d75;margin-bottom:8px;font-weight:500}
+.pf-sheet__body b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#974634;margin-bottom:8px;font-weight:500}
 .pf-sheet__body p{margin:0;font-size:14px;line-height:1.55;font-weight:300;color:#e6e6e6}
-.pf-sheet--accent{border-color:rgba(184,109,117,.55);background:linear-gradient(160deg,rgba(184,109,117,.22),rgba(255,255,255,.02))}
+.pf-sheet--accent{border-color:rgba(151,70,52,.55);background:linear-gradient(160deg,rgba(151,70,52,.22),rgba(255,255,255,.02))}
 .pf-sheet__big{display:block;font-size:30px;font-weight:300;margin:4px 0 6px;color:#fff;line-height:1.15}
 .pf-people{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
-.pf-people span{padding:4px 10px;border-radius:20px;border:1px solid rgba(184,109,117,.4);font-size:12px;color:#e6e6e6}
+.pf-people span{padding:4px 10px;border-radius:20px;border:1px solid rgba(151,70,52,.4);font-size:12px;color:#e6e6e6}
 .pf-modal{overscroll-behavior:contain}.pf-modal__bg{touch-action:none}.pf-sheets{overscroll-behavior:contain}
 
 @media (max-width:1199px){.pf__title{font-size:34px}.pf-sheets{grid-template-columns:repeat(2,minmax(0,300px));overflow:auto;padding-bottom:20px}}
@@ -130,3 +130,7 @@ html,body{overflow-x:clip}
 /* задняя стенка папки — того же стекла, что и передняя, без фото */
 .pf-back{background:linear-gradient(165deg,#3a3335 0%,#221c1e 45%,#3b272b 100%)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.14)}
 .pf-back::after{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.25))}
+
+/* названия NDA-кейсов — размытая заглушка (настоящих названий в коде нет) */
+.pf-blur{filter:blur(7px);user-select:none;-webkit-user-select:none}
+.pf-modal__head h3.pf-blur{filter:blur(9px)}

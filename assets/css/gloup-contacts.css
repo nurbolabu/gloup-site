@@ -1,18 +1,18 @@
 /* GLOUP: контакты — чёрный фон, фирменный акцент, лёгкое свечение */
-.gc{--acc:#b86d75;--line:rgba(255,255,255,.12);font-family:Montserrat,Arial,sans-serif;color:#fff;background:#000;position:relative;overflow:hidden}
+.gc{--acc:#974634;--line:rgba(255,255,255,.12);font-family:Montserrat,Arial,sans-serif;color:#fff;background:#000;position:relative;overflow:hidden}
 .gc *,.gc *::before,.gc *::after{box-sizing:border-box}
-.gc::before{content:"";position:absolute;left:-10%;top:-30%;width:60%;height:120%;pointer-events:none;background:radial-gradient(closest-side,rgba(184,109,117,.16),transparent 70%)}
+.gc::before{content:"";position:absolute;left:-10%;top:-30%;width:60%;height:120%;pointer-events:none;background:radial-gradient(closest-side,rgba(151,70,52,.16),transparent 70%)}
 .gc__wrap{position:relative;max-width:1200px;margin:0 auto;padding:110px 20px 40px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end}
-.gc__logo{display:block;width:min(100%,440px);height:auto;filter:drop-shadow(0 0 28px rgba(184,109,117,.28))}
+.gc__logo{display:block;width:min(100%,440px);height:auto;filter:drop-shadow(0 0 28px rgba(151,70,52,.28))}
 .gc__lead{margin:34px 0 0;max-width:380px;font-size:16px;line-height:1.6;font-weight:300;color:#cfcfcf}
 .gc__title{margin:0 0 26px;font-size:40px;font-weight:300;line-height:1.1;color:#fff}
 .gc__list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .gc__link{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px;border-bottom:1px solid var(--line);color:#fff;text-decoration:none;font-size:20px;font-weight:400;transition:padding .45s cubic-bezier(.22,1,.36,1),color .3s}
 .gc__link small{display:block;margin-top:4px;font-size:13px;font-weight:300;color:rgba(255,255,255,.5)}
-.gc__go{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(184,109,117,.6);color:var(--acc);display:flex;align-items:center;justify-content:center;transition:background .35s,color .35s,box-shadow .35s}
+.gc__go{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(151,70,52,.6);color:var(--acc);display:flex;align-items:center;justify-content:center;transition:background .35s,color .35s,box-shadow .35s}
 .gc__go svg{width:16px;height:16px}
 .gc__link:hover{padding-left:12px;color:var(--acc)}
-.gc__link:hover .gc__go{background:var(--acc);color:#000;box-shadow:0 0 24px -4px rgba(184,109,117,.7)}
+.gc__link:hover .gc__go{background:var(--acc);color:#000;box-shadow:0 0 24px -4px rgba(151,70,52,.7)}
 .gc__link:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .gc__bottom{position:relative;max-width:1200px;margin:0 auto;padding:22px 20px 30px;display:flex;justify-content:space-between;gap:16px;font-size:13px;color:rgba(255,255,255,.45);border-top:1px solid var(--line)}
 .gc__top{display:inline-flex;align-items:center;gap:8px;color:var(--acc);text-decoration:none}

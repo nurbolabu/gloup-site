@@ -1,18 +1,18 @@
 /* GLOUP: логотипы клиентов, услуги, этапы — в стиле стеклянных папок */
-.gb{--acc:#b86d75;--ease:cubic-bezier(.22,1,.36,1);font-family:Montserrat,Arial,sans-serif;color:#fff;box-sizing:border-box}
+.gb{--acc:#974634;--ease:cubic-bezier(.22,1,.36,1);font-family:Montserrat,Arial,sans-serif;color:#fff;box-sizing:border-box}
 .gb *,.gb *::before,.gb *::after{box-sizing:border-box}
 .gb-wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .gb-eyebrow{display:block;text-align:center;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);margin-bottom:16px}
 .gb-title{margin:0 0 18px;text-align:center;font-weight:400;font-size:40px;line-height:1.2;text-transform:uppercase}
 .gb-lead{max-width:620px;margin:0 auto 64px;text-align:center;font-size:15px;font-weight:300;line-height:1.6;color:#dadada}
-.gb-btn{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 24px;border-radius:32px;border:1px solid rgba(184,109,117,.6);background:transparent;color:var(--acc);font:400 13px Montserrat,Arial,sans-serif;letter-spacing:.06em;white-space:nowrap;flex:none;text-decoration:none;cursor:pointer;transition:background .35s,color .35s,border-color .35s}
+.gb-btn{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 24px;border-radius:32px;border:1px solid rgba(151,70,52,.6);background:transparent;color:var(--acc);font:400 13px Montserrat,Arial,sans-serif;letter-spacing:.06em;white-space:nowrap;flex:none;text-decoration:none;cursor:pointer;transition:background .35s,color .35s,border-color .35s}
 .gb-btn:hover{background:var(--acc);color:#242424;border-color:var(--acc)}
 
 /* ---------- логотипы ---------- */
 .gb-logos{background:#000;padding:56px 0}
 .gb-logos__pill{position:relative;margin:0 auto;max-width:1240px;height:104px;border-radius:60px;overflow:hidden;
   background:linear-gradient(100deg,#3a2a27 0%,#4a3330 22%,#2a2322 48%,#4b3532 70%,#6b4d43 100%);
-  border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 20px 50px -30px rgba(184,109,117,.5)}
+  border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 20px 50px -30px rgba(151,70,52,.5)}
 .gb-logos__pill::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.5),transparent 9%,transparent 91%,rgba(0,0,0,.5))}
 .gb-logos__track{display:flex;align-items:center;height:100%;width:max-content;animation:gb-marquee 46s linear infinite}
 .gb-logos__pill:hover .gb-logos__track{animation-play-state:paused}
@@ -31,7 +31,7 @@
 @media (max-width:639px){.gb-logos{padding:36px 0}.gb-logos__pill{height:76px;border-radius:40px;margin:0 12px}.gb-logo{padding:0 26px;transform:scale(.78)}}
 
 /* ---------- услуги: стеклянные папки-аккордеоны ---------- */
-.gb-services{padding:110px 0;background:radial-gradient(50% 35% at 50% 0%,rgba(184,109,117,.15),transparent 70%),linear-gradient(180deg,#242424,#0b0b0b)}
+.gb-services{padding:110px 0;background:radial-gradient(50% 35% at 50% 0%,rgba(151,70,52,.15),transparent 70%),linear-gradient(180deg,#242424,#0b0b0b)}
 .gb-svc{display:flex;flex-direction:column;gap:18px;max-width:1040px;margin:0 auto}
 .gb-svc__item{position:relative;padding-top:22px;opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .gb-svc__item.is-in{opacity:1;transform:none}
@@ -40,13 +40,13 @@
   background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.1);border-bottom:0;
   clip-path:polygon(0 0,82% 0,100% 100%,0 100%);transition:width .7s var(--ease),background .5s}
 .gb-svc__card{position:relative;border-radius:0 24px 24px 24px;overflow:hidden;
-  background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(40,30,32,.35) 45%,rgba(184,109,117,.12));
+  background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(40,30,32,.35) 45%,rgba(151,70,52,.12));
   border:1px solid rgba(255,255,255,.1);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 24px 50px -30px rgba(0,0,0,.9);transition:border-color .5s,box-shadow .5s}
 .gb-svc__head{display:grid;grid-template-columns:260px 1fr 46px;align-items:center;gap:28px;width:100%;padding:28px 32px;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
 .gb-svc__name{font-size:22px;font-weight:400;text-transform:uppercase;line-height:1.25}
 .gb-svc__desc{font-size:14px;font-weight:300;line-height:1.6;color:#d6d6d6}
-.gb-svc__plus{width:46px;height:46px;border-radius:50%;border:1px solid rgba(184,109,117,.6);display:flex;align-items:center;justify-content:center;color:var(--acc);transition:transform .7s var(--ease),background .4s,color .4s}
+.gb-svc__plus{width:46px;height:46px;border-radius:50%;border:1px solid rgba(151,70,52,.6);display:flex;align-items:center;justify-content:center;color:var(--acc);transition:transform .7s var(--ease),background .4s,color .4s}
 .gb-svc__plus svg{width:16px;height:16px}
 .gb-svc__body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .8s var(--ease)}
 .gb-svc__inner{overflow:hidden}
@@ -56,8 +56,8 @@
 .gb-svc__item.is-open .gb-svc__body{grid-template-rows:1fr}
 .gb-svc__item.is-open .gb-svc__chips span{opacity:1;transform:none}
 .gb-svc__item.is-open .gb-svc__plus{transform:rotate(45deg);background:var(--acc);color:#242424}
-.gb-svc__item.is-open::before,.gb-svc__item:hover::before{width:260px;background:linear-gradient(180deg,rgba(184,109,117,.3),rgba(184,109,117,.08))}
-.gb-svc__item.is-open .gb-svc__card,.gb-svc__item:hover .gb-svc__card{border-color:rgba(184,109,117,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 30px 60px -30px rgba(184,109,117,.45)}
+.gb-svc__item.is-open::before,.gb-svc__item:hover::before{width:260px;background:linear-gradient(180deg,rgba(151,70,52,.3),rgba(151,70,52,.08))}
+.gb-svc__item.is-open .gb-svc__card,.gb-svc__item:hover .gb-svc__card{border-color:rgba(151,70,52,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 30px 60px -30px rgba(151,70,52,.45)}
 .gb-svc__actions{display:flex;gap:10px;flex-wrap:wrap}
 @media (max-width:959px){
   .gb-svc__head{grid-template-columns:1fr 46px;gap:10px 18px;padding:24px}
@@ -76,19 +76,19 @@
 .gb-steps{padding:110px 0 130px;background:linear-gradient(180deg,#0b0b0b,#000)}
 .gb-tl{position:relative;display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:1fr;gap:20px;padding-top:56px;align-items:stretch}
 .gb-tl__line{position:absolute;left:3%;right:3%;top:18px;height:1px;background:rgba(255,255,255,.12)}
-.gb-tl__line i{position:absolute;inset:0;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,rgba(184,109,117,.2),var(--acc));transition:transform .2s linear}
+.gb-tl__line i{position:absolute;inset:0;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,rgba(151,70,52,.2),var(--acc));transition:transform .2s linear}
 .gb-st{position:relative;display:flex}.gb-st__file{flex:1}
 .gb-st__dot{position:absolute;left:24px;top:-44px;width:13px;height:13px;border-radius:50%;border:1px solid var(--acc);background:#000;transition:background .5s,box-shadow .5s}
-.gb-st.is-in .gb-st__dot{background:var(--acc);box-shadow:0 0 0 6px rgba(184,109,117,.15)}
+.gb-st.is-in .gb-st__dot{background:var(--acc);box-shadow:0 0 0 6px rgba(151,70,52,.15)}
 .gb-st__file{position:relative;height:100%;border-radius:18px;padding:18px 20px 24px;
-  background:linear-gradient(165deg,rgba(255,255,255,.1),rgba(30,24,25,.5) 50%,rgba(184,109,117,.1));border:1px solid rgba(255,255,255,.1);
+  background:linear-gradient(165deg,rgba(255,255,255,.1),rgba(30,24,25,.5) 50%,rgba(151,70,52,.1));border:1px solid rgba(255,255,255,.1);
   -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 24px 40px -28px rgba(0,0,0,.9);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 0 46px -14px rgba(184,109,117,.38),0 24px 40px -28px rgba(0,0,0,.9);opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease),border-color .4s,box-shadow .4s}
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 0 46px -14px rgba(151,70,52,.38),0 24px 40px -28px rgba(0,0,0,.9);opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease),border-color .4s,box-shadow .4s}
 .gb-st.is-in .gb-st__file{opacity:1;transform:none}
 
-.gb-st__file:hover{border-color:rgba(184,109,117,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 0 60px -12px rgba(184,109,117,.55),0 24px 40px -28px rgba(0,0,0,.9)}
+.gb-st__file:hover{border-color:rgba(151,70,52,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 0 60px -12px rgba(151,70,52,.55),0 24px 40px -28px rgba(0,0,0,.9)}
 .gb-st__bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.08)}
-.gb-st__ic{width:38px;height:38px;border-radius:12px;border:1px solid rgba(184,109,117,.5);display:flex;align-items:center;justify-content:center;color:var(--acc)}
+.gb-st__ic{width:38px;height:38px;border-radius:12px;border:1px solid rgba(151,70,52,.5);display:flex;align-items:center;justify-content:center;color:var(--acc)}
 .gb-st__ic svg{width:18px;height:18px}
 .gb-st__meta{font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.4);text-transform:uppercase}
 .gb-st h3{margin:0 0 10px;font-size:16px;font-weight:400;text-transform:uppercase;line-height:1.3}
@@ -102,7 +102,7 @@
   .gb-steps{padding:64px 0 80px}
   .gb-tl{grid-template-columns:1fr;gap:18px;padding:0 0 0 30px}
   .gb-tl__line{left:6px;right:auto;top:0;bottom:0;width:1px;height:auto}
-  .gb-tl__line i{transform-origin:50% 0;transform:scaleY(var(--p,0));background:linear-gradient(180deg,rgba(184,109,117,.2),var(--acc))}
+  .gb-tl__line i{transform-origin:50% 0;transform:scaleY(var(--p,0));background:linear-gradient(180deg,rgba(151,70,52,.2),var(--acc))}
   .gb-st__dot{left:-30px;top:24px}
 
 }
@@ -126,7 +126,7 @@
 .gs{background:#000;padding:56px 20px 64px;font-family:Montserrat,Arial,sans-serif}
 .gs__list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:0 auto;padding:0;list-style:none}
 .gs__item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
-.gs__num{font-size:clamp(34px,4.6vw,64px);font-weight:100;line-height:1;color:#b86d75;white-space:nowrap}
+.gs__num{font-size:clamp(34px,4.6vw,64px);font-weight:100;line-height:1;color:#974634;white-space:nowrap}
 .gs__cap{font-size:15px;font-weight:400;color:#cfcfcf}
 @media (max-width:639px){
   .gs{padding:40px 16px 48px}
@@ -145,16 +145,16 @@ a:hover>.g-arrow,button:hover>.g-arrow{transform:translate(2px,-2px)}
 
 /* этапы v3: стеклянная папка с ярлычком «Шаг N» — как карточки услуг и портфолио */
 .gb-steps .gb-st__file{display:flex;flex-direction:column;padding:0;background:none;border:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;border-radius:0}
-.gb-st__tab{align-self:flex-start;position:relative;height:32px;padding:0 30px 0 18px;display:flex;align-items:center;font-size:12px;letter-spacing:.06em;color:#b86d75;
-  background:linear-gradient(180deg,rgba(184,109,117,.24),rgba(184,109,117,.1));border:1px solid rgba(255,255,255,.1);border-bottom:0;border-radius:16px 16px 0 0;
+.gb-st__tab{align-self:flex-start;position:relative;height:32px;padding:0 30px 0 18px;display:flex;align-items:center;font-size:12px;letter-spacing:.06em;color:#974634;
+  background:linear-gradient(180deg,rgba(151,70,52,.24),rgba(151,70,52,.1));border:1px solid rgba(255,255,255,.1);border-bottom:0;border-radius:16px 16px 0 0;
   clip-path:polygon(0 0,80% 0,100% 100%,0 100%);transition:background .5s}
 .gb-st__card{flex:1;position:relative;padding:26px 22px 28px;border-radius:0 22px 22px 22px;
-  background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(40,30,32,.35) 45%,rgba(184,109,117,.12));border:1px solid rgba(255,255,255,.1);
+  background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(40,30,32,.35) 45%,rgba(151,70,52,.12));border:1px solid rgba(255,255,255,.1);
   -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 0 46px -16px rgba(184,109,117,.4),0 24px 40px -28px rgba(0,0,0,.9);transition:border-color .5s,box-shadow .5s}
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 0 46px -16px rgba(151,70,52,.4),0 24px 40px -28px rgba(0,0,0,.9);transition:border-color .5s,box-shadow .5s}
 .gb-steps .gb-st__file:hover{box-shadow:none}
-.gb-st__file:hover .gb-st__card{border-color:rgba(184,109,117,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 0 60px -12px rgba(184,109,117,.55),0 24px 40px -28px rgba(0,0,0,.9)}
-.gb-st__file:hover .gb-st__tab{background:linear-gradient(180deg,rgba(184,109,117,.4),rgba(184,109,117,.16))}
+.gb-st__file:hover .gb-st__card{border-color:rgba(151,70,52,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 0 60px -12px rgba(151,70,52,.55),0 24px 40px -28px rgba(0,0,0,.9)}
+.gb-st__file:hover .gb-st__tab{background:linear-gradient(180deg,rgba(151,70,52,.4),rgba(151,70,52,.16))}
 .gb-st__card .gb-st__ic{width:46px;height:46px;border-radius:50%;margin-bottom:22px}
 .gb-st__card .gb-st__ic svg{width:19px;height:19px}
 .gb-st__card h3{margin:0 0 10px;font-size:16px;font-weight:400;text-transform:uppercase;line-height:1.3}
@@ -163,26 +163,26 @@ a:hover>.g-arrow,button:hover>.g-arrow{transform:translate(2px,-2px)}
 
 /* хедер: матовое стекло */
 #rec4156104503 .tn-elem[data-elem-id="1790175131990"] .tn-atom{
-  opacity:1!important;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(30,22,24,.38) 50%,rgba(184,109,117,.1))!important;
+  opacity:1!important;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(30,22,24,.38) 50%,rgba(151,70,52,.1))!important;
   -webkit-backdrop-filter:blur(20px) saturate(1.5);backdrop-filter:blur(20px) saturate(1.5);
   border:1px solid rgba(255,255,255,.14)!important;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 10px 30px -12px rgba(0,0,0,.7),0 0 30px -10px rgba(184,109,117,.35)!important}
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 10px 30px -12px rgba(0,0,0,.7),0 0 30px -10px rgba(151,70,52,.35)!important}
 #rec4156104503 .tn-elem[data-elem-id="1790175131990"]{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
 
 /* этапы v4: без плашек — линия проходит через иконки и заполняет их */
 .gb-path{position:relative;padding-top:10px}
 .gb-path__line{position:absolute;background:rgba(255,255,255,.14);pointer-events:none}
-.gb-path__line i{position:absolute;inset:0;display:block;background:#b86d75;box-shadow:0 0 14px rgba(184,109,117,.7);transform-origin:0 0;transform:scaleX(0);transition:transform .15s linear}
+.gb-path__line i{position:absolute;inset:0;display:block;background:#974634;box-shadow:0 0 14px rgba(151,70,52,.7);transform-origin:0 0;transform:scaleX(0);transition:transform .15s linear}
 .gb-path.is-vert .gb-path__line i{transform:scaleY(0)}
 .gb-path__list{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:28px;margin:0;padding:0;list-style:none}
 .gb-path__step{display:flex;flex-direction:column;align-items:flex-start;opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
 .gb-path__step.is-in{opacity:1;transform:none}
 .gb-path__node{position:relative;z-index:1;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  background:#000;border:1px solid rgba(184,109,117,.55);color:#b86d75;transition:background .5s,color .5s,box-shadow .5s,border-color .5s}
+  background:#000;border:1px solid rgba(151,70,52,.55);color:#974634;transition:background .5s,color .5s,box-shadow .5s,border-color .5s}
 .gb-path__node svg{width:24px;height:24px}
-.gb-path__node.is-on{background:#b86d75;border-color:#b86d75;color:#000;box-shadow:0 0 0 8px rgba(184,109,117,.12),0 0 36px rgba(184,109,117,.55)}
+.gb-path__node.is-on{background:#974634;border-color:#974634;color:#000;box-shadow:0 0 0 8px rgba(151,70,52,.12),0 0 36px rgba(151,70,52,.55)}
 .gb-path__text{margin-top:26px}
-.gb-path__meta{display:block;font-size:12px;letter-spacing:.06em;color:#b86d75;margin-bottom:10px}
+.gb-path__meta{display:block;font-size:12px;letter-spacing:.06em;color:#974634;margin-bottom:10px}
 .gb-path__text h3{margin:0 0 10px;font-size:17px;font-weight:400;text-transform:uppercase;line-height:1.3;color:#fff}
 .gb-path__text p{margin:0;font-size:14px;line-height:1.6;font-weight:300;color:#cfcfcf;max-width:260px}
 @media (max-width:959px){
