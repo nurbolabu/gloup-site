@@ -4,10 +4,18 @@
   var FIELDS={name:'entry.978458685',contact:'entry.1468784854',service:'entry.2053773197',message:'entry.1860947187'};
   document.addEventListener('DOMContentLoaded',function(){
     var form=document.querySelector('.gl-form');if(!form)return;
-    // все кнопки BRIEF/«Обсудить» ведут к форме
+    // кнопки «БРИФ» и «Обсудить» ведут к форме.
+    // Делегируем через document в фазе захвата: Tilda пересоздаёт элементы кнопок при инициализации,
+    // и обработчик, повешенный прямо на кнопку, терялся.
     function toLead(e){if(e)e.preventDefault();document.getElementById('lead').scrollIntoView({behavior:'smooth'});setTimeout(function(){var i=form.querySelector('input');i&&i.focus({preventScroll:true})},700)}
-    [].forEach.call(document.querySelectorAll('.tn-atom__button-text'),function(t){if(/brief/i.test(t.textContent)){var b=t.closest('.tn-atom');b.style.cursor='pointer';b.addEventListener('click',toLead)}});
-    document.addEventListener('click',function(e){var a=e.target.closest('a[href="#lead"]');if(a)toLead(e)});
+    var BRIEF=/brief|бриф/i;
+    document.addEventListener('click',function(e){
+      if(e.target.closest('a[href="#lead"]')){toLead(e);return}
+      var atom=e.target.closest('.tn-atom');
+      var txt=atom&&atom.querySelector('.tn-atom__button-text');
+      if(txt&&BRIEF.test(txt.textContent))toLead(e);
+    },true);
+    [].forEach.call(document.querySelectorAll('.tn-atom__button-text'),function(t){if(BRIEF.test(t.textContent))t.closest('.tn-atom').style.cursor='pointer'});
 
     // плавающая кнопка заявки. Живёт в <html>: Tilda ставит transform на body, и fixed внутри body уезжает
     var fab=document.createElement('a');fab.href='#lead';fab.className='gl-fab';fab.setAttribute('aria-label','Оставить заявку');
