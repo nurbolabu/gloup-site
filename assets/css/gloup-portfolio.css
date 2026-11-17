@@ -134,3 +134,12 @@ html,body{overflow-x:clip}
 /* названия NDA-кейсов — размытая заглушка (настоящих названий в коде нет) */
 .pf-blur{filter:blur(7px);user-select:none;-webkit-user-select:none}
 .pf-modal__head h3.pf-blur{filter:blur(9px)}
+
+/* разработка сайтов: кнопка «Смотреть сайт» и кадры сайта в окне проекта */
+.pf-site{display:inline-flex;align-items:center;gap:10px;margin-top:18px;height:46px;padding:0 24px;border-radius:40px;border:1px solid #974634;color:#fff;background:rgba(151,70,52,.25);font:500 14px Montserrat,Arial,sans-serif;text-decoration:none;transition:background .3s}
+.pf-site svg{width:16px;height:16px}
+.pf-site:hover{background:#974634}
+.pf-sheet--shot{padding:0;overflow:hidden;align-self:start}
+.pf-sheet--shot img{display:block;width:100%;height:auto}
+.pf-sheet--mobile{max-width:200px;justify-self:center;border-radius:26px}
+@media (max-width:639px){.pf-sheet--mobile{max-width:62%}}

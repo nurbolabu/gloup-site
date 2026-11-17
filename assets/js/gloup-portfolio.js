@@ -41,9 +41,19 @@
     {tag:'Трафик',f:['Трафик и контекст'],name:'OWAY CARGO',text:'Таргет и упаковка бренда',
      req:'Упаковать бренд карго-компании и запустить поток клиентов.',sol:'Упаковка бренда и таргетированная реклама.'},
     {tag:'Full outsourcing',f:['Full outsourcing','Трафик и контекст'],name:'Modern Nomad',text:'Продвижение, таргет, SMM и дизайн',
-     req:'Комплексно вести маркетинг бренда.',sol:'Продвижение, таргет, SMM и дизайн.'}
+     req:'Комплексно вести маркетинг бренда.',sol:'Продвижение, таргет, SMM и дизайн.'},
+    // Разработка сайтов: url — кнопка «Смотреть сайт», shots — дополнительные кадры в окне проекта
+    {tag:'Разработка сайтов',f:['Разработка сайтов'],name:'KingDrink',url:'https://freemandesign.tilda.ws/kingdrink',img:['web-kingdrink-1','web-kingdrink-1','web-kingdrink-2'],shots:['web-kingdrink-3','web-kingdrink-m'],
+     text:'Промо-сайт бренда напитков с эффектной анимацией по скроллу',
+     req:'Создать сайт для бренда напитков KingDrink, который производит впечатление с первого экрана.',sol:'Промо-сайт с анимацией по скроллу, яркой айдентикой бренда и отдельным разделом для бизнес-партнёров.'},
+    {tag:'Разработка сайтов',f:['Разработка сайтов'],name:'Intermax BSV',url:'https://freemandesign.tilda.ws/intermax',img:['web-intermax-1','web-intermax-1','web-intermax-2'],shots:['web-intermax-3','web-intermax-m'],
+     text:'Строгий и стильный сайт архитектурной компании',
+     req:'Показать собственные проекты архитектурной компании и привлекать новых клиентов.',sol:'Сдержанный сайт с портфолио объектов, лицензиями, ключевыми цифрами и формой консультации.'},
+    {tag:'Разработка сайтов',f:['Разработка сайтов'],name:'Vanilla Handmade Coffee',url:'https://vanillahandmade.kz',img:['web-vanilla-1','web-vanilla-1','web-vanilla-2'],shots:['web-vanilla-3','web-vanilla-m'],
+     text:'Интернет-магазин сети кофеен с онлайн-оплатой',
+     req:'Продавать кофе собственной обжарки онлайн с доставкой по Алматы.',sol:'Интернет-магазин с каталогом всех товаров, корзиной, избранным и подключённой онлайн-оплатой.'}
   ];
-  var FILE={'Стратегия':['Strategy','PDF'],'Вывод на рынок':['Go-to-market','PDF'],'Ребрендинг':['Brandbook','PDF'],'PR и стратегия':['PR plan','DOC'],'Брендинг':['Brandbook','PDF'],'PR':['PR plan','DOC'],'Продакшн':['Shooting','MOV'],'Инфлюенс-маркетинг':['Influencers','XLS'],'Трафик':['Ads report','PDF'],'Full outsourcing':['Media plan','PDF']};
+  var FILE={'Разработка сайтов':['Website','FIG'],'Стратегия':['Strategy','PDF'],'Вывод на рынок':['Go-to-market','PDF'],'Ребрендинг':['Brandbook','PDF'],'PR и стратегия':['PR plan','DOC'],'Брендинг':['Brandbook','PDF'],'PR':['PR plan','DOC'],'Продакшн':['Shooting','MOV'],'Инфлюенс-маркетинг':['Influencers','XLS'],'Трафик':['Ads report','PDF'],'Full outsourcing':['Media plan','PDF']};
   // обложки без фото: один фирменный цвет #974634 на разных тёмных основах
   var PAL=[['#974634','#1d1416','rgba(255,255,255,.32)'],['#974634','#120c0d','rgba(255,255,255,.22)'],['#974634','#2a1b1e','rgba(255,255,255,.4)'],['#974634','#0d0a0b','rgba(255,255,255,.28)'],['#974634','#241719','rgba(255,255,255,.36)']];
   function art(i){var p=PAL[i%PAL.length],a=(i*47)%100,b=(i*73+30)%100;
@@ -70,8 +80,10 @@
     var s=[{img:pic(p,i,0),nda:p.nda,t:'Запрос',x:esc(p.req||p.text)},{img:p.img&&p.img[2]?pic(p,i,2):'',t:'Решение',x:esc(p.sol||p.text)}];
     if(p.big||p.res)s.push({acc:1,t:'Результат',big:p.big,x:esc(p.big?(p.bigText||''):p.res)});
     if(p.people)s.push({t:'Работали с',people:p.people});
+    (p.shots||[]).forEach(function(k){s.push({shot:k,mobile:/-m$/.test(k)})});
     return s.map(function(c,k){
-      return '<article class="pf-sheet'+(c.acc?' pf-sheet--accent':'')+'" style="--r:'+[-12,8,-5,11][k]+'deg;transition-delay:'+(.06+k*.09)+'s">'+
+      if(c.shot)return '<article class="pf-sheet pf-sheet--shot'+(c.mobile?' pf-sheet--mobile':'')+'" style="--r:'+[-12,8,-5,11,6,-8][k%6]+'deg;transition-delay:'+(.06+k*.09)+'s"><img src="assets/cases/'+c.shot+'.jpg" alt="Кадр сайта" loading="lazy"></article>';
+      return '<article class="pf-sheet'+(c.acc?' pf-sheet--accent':'')+'" style="--r:'+[-12,8,-5,11,6,-8][k%6]+'deg;transition-delay:'+(.06+k*.09)+'s">'+
         (c.img?'<div class="pf-sheet__img'+(c.nda?' pf-back--nda':'')+'" style="'+c.img+'">'+(c.nda?'<span class="pf-lock">NDA</span>':'')+'</div>':'')+
         '<div class="pf-sheet__body"><b>'+c.t+'</b>'+(c.big?'<span class="pf-sheet__big">'+c.big+'</span>':'')+
         (c.people?'<div class="pf-people">'+c.people.map(function(n){return '<span>'+esc(n)+'</span>'}).join('')+'</div>':'<p>'+c.x+'</p>')+'</div></article>';
@@ -112,7 +124,7 @@
     var box=modal.querySelector('.pf-sheets'),head=modal.querySelector('.pf-modal__head'),last;
     function open(btn){
       var i=+btn.dataset.i,p=P[i];last=btn;
-      head.innerHTML='<small>'+esc(p.tags||p.tag)+(p.nda?' · NDA':'')+'</small><h3'+(p.nda?' class="pf-blur" aria-label="Название под NDA"':'')+'>'+esc(p.name)+'</h3>'+(p.hide?'<p>'+p.hide+'</p>':'');
+      head.innerHTML='<small>'+esc(p.tags||p.tag)+(p.nda?' · NDA':'')+'</small><h3'+(p.nda?' class="pf-blur" aria-label="Название под NDA"':'')+'>'+esc(p.name)+'</h3>'+(p.hide?'<p>'+p.hide+'</p>':'')+(p.url?'<a class="pf-site" href="'+esc(p.url)+'" target="_blank" rel="noopener">Смотреть сайт '+arrow+'</a>':'');
       box.innerHTML=sheets(p,i);box.style.setProperty('--n',box.children.length);box.scrollTop=0;
       // карточки вылетают из папки, по которой нажали
       var r=btn.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height*.35;
